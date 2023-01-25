@@ -11,7 +11,7 @@ export const Footer = () => {
                 </button>
             </div>
             <div className="">
-                @2023 HandCrafted by the Best
+                Copyright@2023 HandCrafted by the Best
             </div>
         </div>
     </div>

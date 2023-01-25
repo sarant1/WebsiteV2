@@ -1,40 +1,41 @@
+import { ChangeEvent, useState } from 'react';
 import axios from 'axios';
-import { useState, ChangeEvent } from 'react'
+
 
 
 
 
 export const FileUpload = () => {
-    
-    const [selectedFile, setSelectedFile] = useState<File>();
 
-    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const [file, setFile] = useState<File>();
+
+    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
-            setSelectedFile(e.target.files[0]);
+            setFile(e.target.files[0]);
         }
-    };
+    }
 
-    const handleSubmission = () => {
-        if (!selectedFile) {
+    const handleUploadClick = () => {
+        if (!file) {
             return;
         }
-        axios.put('https://po6fd8myk1.execute-api.us-east-1.amazonaws.com/v1/fromapigateway-1228', selectedFile, {
+
+        axios.post('https://httpbin.org/post', {
+            body: file,
             headers: {
-                'Content-type': 'application/json',
-                'accept': 'image/jpeg'
-            }
+                'content-type': file.type,
+                'content-length': `${file.size}`,
+            },
         })
-        .then((res) => console.log(res.data))
-        .catch((error) => console.log(error))
-        
-        console.log(selectedFile);
-    };
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error));
+    }
 
 
     return (
         <div>
-            <input onChange={changeHandler} type="file"/>
-            <button onClick={handleSubmission} className="border-solid border-2 border-orange-400 rounded-lg p-1">Upload</button>
+            <input onChange={handleFileChange} type="file"></input>
+            <button onClick={handleUploadClick} className="border-black border-2 border-solid rounded-lg p-1">Upload</button>
         </div>
     );
 };
