@@ -1,16 +1,19 @@
 import { Navbar } from '../components/navbar'
 import { Hero } from '../components/hero'
-import { Certs } from '../components/certifications'
 import { Footer } from '../components/footer'
+import { Projects } from '../components/projects'
+import { Resume } from '../components/resume'
+
 
 
 
 export const Home = () => {
     return (
-        <div>
+        <div className="bg-gray-200">
             <Navbar />
             <Hero />
-            <Certs />
+            <Projects />
+            <Resume />
             <Footer />
         </div>
     );
