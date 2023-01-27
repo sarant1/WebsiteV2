@@ -9,6 +9,10 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif']
       },
+
+      backgroundImage: {
+        'redrock': "url('./images/redrock.jpeg')"
+      },
     },
   },
   plugins: [],

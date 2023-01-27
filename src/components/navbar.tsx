@@ -1,7 +1,7 @@
 export const Navbar = () => {
     return (
         <div>
-            <nav className="bg-blue-500">
+            <nav className="">
                 <nav className="h-16 flex flex-row justify-between items-center md:p-6 mr-5 ml-5 xl:ml-32 xl:mr-32">
                     <h3 className="text-2xl lg:text-3xl font-bold">Samuel Arant</h3>
                     <div>

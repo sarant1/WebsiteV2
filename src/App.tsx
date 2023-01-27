@@ -1,19 +1,16 @@
 import React from 'react'
-import { Navbar } from './components/navbar'
-import { Hero } from './components/hero'
-import { Footer } from './components/footer'
-import { FileUpload } from './components/fileuploader'
+import { Routes, Route } from "react-router-dom"
+import { Home } from './pages/home'
+import { Contactme } from './pages/contact'
 
 
 function App() {
 
   return (
-    <div className="font-poppins bg-slate-400">
-      <Navbar />
-      <Hero />
-      <FileUpload/>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/contact" element={<Contactme />} />
+    </Routes>
   );
 }
 
