@@ -13,6 +13,10 @@ module.exports = {
       backgroundImage: {
         'redrock': "url('./images/redrock.jpeg')"
       },
+
+      transformOrigin: {
+        'uline-left-to-right': 'transform 0.25s ease-out'
+      }
     },
   },
   plugins: [],

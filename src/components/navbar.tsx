@@ -9,9 +9,9 @@ export const Navbar = () => {
                             <button><img className="h-10 md:hidden mt-1 rounded-3xl hover:bg-white p-1" src={require("../icons/menubars.png")} alt=""/></button>
                         </div>
                         <div className="hidden md:visible md:flex flex-row font-bold lg:text-xl">
-                            <div className="ml-4 md:ml-8 lg:ml-20 hover:underline">Contact Me</div>
-                            <div className="ml-4 md:ml-8 lg:ml-20 hover:underline">Resume</div>
-                            <div className="ml-4 md:ml-8 lg:ml-20 hover:underline">Projects</div>
+                            <button className="ml-4 md:ml-8 lg:ml-20 hover-underline-animation">Contact Me</button>
+                            <button className="ml-4 md:ml-8 lg:ml-20 hover-underline-animation ">Resume</button>
+                            <button className="ml-4 md:ml-8 lg:ml-20 hover-underline-animation ">Projects</button>
                         </div>
                     </nav>
                 </nav> 
