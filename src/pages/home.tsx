@@ -9,7 +9,7 @@ import { Resume } from '../components/resume'
 
 export const Home = () => {
     return (
-        <div className="bg-gray-200">
+        <div className="">
             <Navbar />
             <Hero />
             <Projects />

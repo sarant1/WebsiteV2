@@ -1,9 +1,9 @@
 export const Navbar = () => {
     return (
         <div>
-            <div className="border-2 border-b-solid border-black rounded-md">
+            <div className="border-b-2 border-black bg-slate-600">
                 <nav className="">
-                    <nav className="h-20 flex flex-row justify-between items-center md:p-6 ml-4 mr-4 xl:ml-32 xl:mr-32 border-solid border-2">
+                    <nav className="h-20 flex flex-row justify-between items-center md:p-6 ml-4 mr-4 xl:ml-32 xl:mr-32">
                         <h3 className="text-2xl lg:text-3xl font-bold">Samuel Arant</h3>
                         <div>
                             <button><img className="h-10 md:hidden mt-1 rounded-3xl hover:bg-white p-1" src={require("../icons/menubars.png")} alt=""/></button>
