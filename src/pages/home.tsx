@@ -10,7 +10,7 @@ import { Resume } from '../components/resume'
 export const Home = () => {
     return (
         <div className="">
-            <Navbar />
+            <div className="bg-slate-600"><Navbar /></div>
             <Hero />
             <Projects />
             <Resume />
