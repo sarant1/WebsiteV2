@@ -9,7 +9,7 @@ export const Resume = () => {
                     <div className="ml-4 md:ml-12 2xl:ml-24">
                         <h1 className="text-5xl font-bold w-[320px] 2xl:w-[500px] mb-8 mt-8">Download or view my Resume from s3 !</h1>
                         <div className="flex justify-between">
-                            <button className="bn632-hover bn24 m-0">Download</button>
+                            <a className="bn632-hover bn24 m-0 text-center flex justify-center items-center pb-1" href="http://samuelarantresume.s3-website-us-east-1.amazonaws.com" target="_blank" rel="noopener noreferrer">Download</a>
                         </div>
                     </div>
                 </div>  
