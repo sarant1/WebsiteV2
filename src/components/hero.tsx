@@ -9,10 +9,10 @@ export const Hero = () => {
                     <img className="w-[320px] rounded-xl shadow-xl" src={require('../images/grandteton.JPEG')} alt="" />
                     <div className="w-[320px] lg:text-xl sm:ml-12">
                     <h1 className="pt-4 pb-4 lg:mb-8 lg:mt-4">Hi, I am Sam,</h1>
-                    <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Aspernatur, minima pariatur dolores quas 
-                        eos quisquam consequatur unde officia accusamus! Tempora nobis 
-                        atque cum quas temporibus ea ipsa deserunt mollitia maxime.</p>
+                    <p className="">
+                    After previously persuing a career in the medical field, I am switching to tech, specifically the fast growing field of cloud computing. I have a 
+                   strong background in computer science despite missing a CS degree.  Currently, I focus mainly on the AWS platform but open to learning any platform.
+                    </p>
                     </div>
                 </div>
                 <div className="">
