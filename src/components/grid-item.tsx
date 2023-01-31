@@ -3,11 +3,12 @@
 export const Griditem = ({projects}) => {
 
     return (
-        <div className="grid grid-cols-[repeat(3,minmax(320px,400px))] gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map(project => (
-            <div className="rounded-xl bg-gradient-to-r from-indigo-800 to-violet-800">
+            <div key={project.key} className="rounded-xl bg-gradient-to-r from-indigo-800 to-violet-800 min-w-[320px] max-w-[380px]">
                 <div className="flex flex-col m-4">
-                    <div className="IMG border-solid border-white border-2 h-[200px] rounded-xl mt-4">
+                    <div className="IMG border-solid border-white border-2 rounded-xl mt-4">
+                        <img src={project.workflowLocation} alt=""/>
                     </div>
                     <div className="pl-2">
                         <div className="TEXT text-white mt-4 font-bold">
