@@ -3,14 +3,14 @@ import watermarklogical from "../workflows/pdfwatermarker.png";
 
 export function Projects() {
   return (
-    <div className="bg-gray-200">
+    <div className="p-2">
       <div>
         <h1 className="text-4xl font-bold p-10 text-center">
           Projects/Hands On
         </h1>
       </div>
       <div className="flex justify-center flex-col items-center">
-        <div className="border-black border-4 border-solid w-3/4 rounded-lg m-5">
+        <div className="border-black border-4 border-solid rounded-lg mb-10">
           <h3 className="text-center p-5 font-bold text-2xl">
             Cruddur (AWS Cloud Bootcamp Project)
           </h3>
@@ -20,7 +20,7 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="border-black border-4 border-solid w-3/4 rounded-lg m-5">
+        <div className="border-black border-4 border-solid rounded-lg mb-10">
           <h3 className="text-center p-5 font-bold text-2xl">
             Serverless PDF Watermark Tool
           </h3>

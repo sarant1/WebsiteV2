@@ -6,14 +6,16 @@ import { Projects } from "../components/Projects";
 
 export const Home = () => {
   return (
-    <div className="">
-      <div className="bg-slate-600">
-        <Navbar />
+    <div>
+      <div className="bg-slate-300 flex justify-center">
+        <div className="xl:w-4/6">
+          <Navbar />
+          <Hero />
+          <Projects />
+          <Resume />
+          <Footer />
+        </div>
       </div>
-      <Hero />
-      <Projects />
-      <Resume />
-      <Footer />
     </div>
   );
 };
