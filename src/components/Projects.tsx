@@ -1,9 +1,33 @@
+import cruddurlogical from "../workflows/cruddurlogical.png";
+import watermarklogical from "../workflows/pdfwatermarker.png";
+
 export function Projects() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold p-4 text-center">Projects/Hands On</h1>
+    <div className="bg-gray-200">
       <div>
-        <img src={require("../workflows/cruddurlogical.svg")} alt="" />
+        <h1 className="text-4xl font-bold p-10 text-center">
+          Projects/Hands On
+        </h1>
+      </div>
+      <div className="flex justify-center flex-col items-center">
+        <div className="border-black border-4 border-solid w-3/4 rounded-lg m-5">
+          <h3 className="text-center p-5 font-bold text-2xl">
+            Cruddur (AWS Cloud Bootcamp Project)
+          </h3>
+          <h5 className="text-center text-gray-500  ">in progress...</h5>
+          <div className="flex justify-center">
+            <img src={cruddurlogical} alt="" className="w-full" />
+          </div>
+        </div>
+
+        <div className="border-black border-4 border-solid w-3/4 rounded-lg m-5">
+          <h3 className="text-center p-5 font-bold text-2xl">
+            Serverless PDF Watermark Tool
+          </h3>
+          <div className="flex justify-center">
+            <img src={watermarklogical} alt="" className="w-full" />
+          </div>
+        </div>
       </div>
     </div>
   );
