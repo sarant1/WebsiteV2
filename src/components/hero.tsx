@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
     <div className="bg-slate-400 rounded-lg m-2">
-      <div className="flex flex-row p-4 flex-wrap">
+      <div className="flex flex-row p-4 flex-wrap justify-center">
         <div className="self-center">
           <img
             className="rounded-xl shadow-xl w-[380px]"
@@ -21,7 +21,7 @@ export const Hero = () => {
               but open to learning any platform.
             </p>
           </div>
-          <div className="pt-4 pb-4 flex flex-row justify-start h-[200px]">
+          <div className="pt-4 pb-4 2xl:flex flex-row justify-start h-[200px] hidden">
             <div className="">
               <img
                 className="hidden 2xl:block min-w-[150px] h-full"
