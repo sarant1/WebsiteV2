@@ -4,7 +4,7 @@ export const Hero = () => {
       <div className="flex flex-row p-4 flex-wrap justify-center">
         <div className="self-center">
           <img
-            className="rounded-xl shadow-xl w-[380px]"
+            className="rounded-xl shadow-xl w-[380px] border-black border-solid border-2"
             src={require("../images/grandteton.JPEG")}
             alt=""
           />
