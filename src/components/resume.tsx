@@ -10,7 +10,7 @@ export const Resume = () => {
             </h1>
             <div className="flex justify-between">
               <a
-                className="bn632-hover bn24 m-0 text-center flex justify-center items-center pb-1"
+                className="bn632-hover bn24 m-0 text-center flex justify-center items-center"
                 href="http://samuelarantresume.s3-website-us-east-1.amazonaws.com"
                 target="_blank"
                 rel="noopener noreferrer"
