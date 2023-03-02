@@ -3,6 +3,7 @@ import { Hero } from "../components/hero";
 import { Footer } from "../components/footer";
 import { Resume } from "../components/resume";
 import { Projects } from "../components/Projects";
+import { Contact } from "../components/Contact";
 
 export const Home = () => {
   return (
@@ -10,9 +11,18 @@ export const Home = () => {
       <div className="bg-slate-300 flex justify-center">
         <div className="xl:w-4/6">
           <Navbar />
-          <Hero />
-          <Projects />
-          <Resume />
+          <section>
+            <Hero />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="resume">
+            <Resume />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
           <Footer />
         </div>
       </div>
