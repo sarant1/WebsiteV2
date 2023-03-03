@@ -1,18 +1,51 @@
+import axios from "axios";
+import { useState } from "react";
+
 export function Contact() {
+  const url = "https://httpbin.org/";
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    axios.post(url, data).then((res) => console.log(res));
+    console.log();
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const newData = { ...data };
+    newData[e.currentTarget.id] = e.currentTarget.value;
+    setData(newData);
+    console.log(data);
+  };
+
+  const handleChangeTextArea = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ): void => {
+    const newData = { ...data };
+    newData[e.currentTarget.id] = e.currentTarget.value;
+    setData(newData);
+    console.log(data);
+  };
+
   return (
     <div>
-      <body className="m-2 flex gap-1">
+      <div className="m-2 flex gap-1">
         <div className="bg-zinc-900 shadow-lg rounded-lg overflow-hidden flex-1">
           <div className="py-4 px-6">
             <h2 className="text-2xl font-bold mb-2 text-gray-100">
               Contact Me!
             </h2>
-            <form className="mb-4">
+            <form onSubmit={handleSubmit} className="mb-4">
               <div className="mb-4">
                 <label className="block text-gray-100 font-bold mb-2">
                   Name
                 </label>
                 <input
+                  onChange={handleChange}
                   className="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="name"
                   type="text"
@@ -24,6 +57,7 @@ export function Contact() {
                   Email
                 </label>
                 <input
+                  onChange={handleChange}
                   className="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="email"
                   type="email"
@@ -35,6 +69,7 @@ export function Contact() {
                   Message
                 </label>
                 <textarea
+                  onChange={handleChangeTextArea}
                   className="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="message"
                   placeholder="Your Message"
@@ -55,10 +90,10 @@ export function Contact() {
             </p>
           </div>
         </div>
-        <div className="bg-zinc-900 flex-1 rounded-lg lg:inline hidden">
+        <div className="border-solid border-4 border-zinc-900 flex-1 rounded-lg lg:inline hidden p-2">
           Hello
         </div>
-      </body>
+      </div>
     </div>
   );
 }

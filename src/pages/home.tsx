@@ -20,9 +20,9 @@ export const Home = () => {
           <section id="resume">
             <Resume />
           </section>
-          {/*<section id="contact">
+          <section id="contact">
             <Contact />
-          </section>*/}
+          </section>
           <Footer />
         </div>
       </div>
