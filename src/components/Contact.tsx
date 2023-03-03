@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 
 export function Contact() {
-  const url = "https://httpbin.org/";
+  var payload = new FormData();
+  const url =
+    "https://97lbi46pbh.execute-api.us-east-1.amazonaws.com/dev/contact";
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -11,8 +13,18 @@ export function Contact() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    axios.post(url, data).then((res) => console.log(res));
-    console.log();
+    for (let key in data) {
+      payload.append(key, data[key]);
+    }
+    axios
+      .post(url, payload, {
+        headers: {
+          "content-type": "multipart/form-data",
+        },
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+    console.log(data);
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
