@@ -13,6 +13,7 @@ export function Contact() {
   });
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     axios
       .post(url, { body: data })
       .then((res) => console.log(res))
