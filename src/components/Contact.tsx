@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import ContactMeDiagram from "../workflows/ContactMeDiagram.png";
 
 export function Contact() {
   var payload = new FormData();
@@ -17,10 +18,13 @@ export function Contact() {
       payload.append(key, data[key]);
     }
     axios
-      .post(url, payload, {
+      .post(url, {
         headers: {
-          "content-type": "multipart/form-data",
+          "content-type": "application/x-www-form-urlencoded",
         },
+        body: JSON.stringify({
+          message: "Hello from JSON body",
+        }),
       })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -102,8 +106,10 @@ export function Contact() {
             </p>
           </div>
         </div>
-        <div className="border-solid border-4 border-zinc-900 flex-1 rounded-lg lg:inline hidden p-2">
-          Hello
+        <div className="border-solid border-4 border-zinc-900 flex-1 rounded-lg lg:inline hidden p-2 items-center">
+          <div className="w-full h-full flex items-center">
+            <img src={ContactMeDiagram} alt="" className="inline" />
+          </div>
         </div>
       </div>
     </div>
