@@ -13,19 +13,8 @@ export function Contact() {
   });
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    for (let key in data) {
-      payload.append(key, data[key]);
-    }
     axios
-      .post(url, {
-        headers: {
-          "content-type": "application/x-www-form-urlencoded",
-        },
-        body: JSON.stringify({
-          message: "Hello from JSON body",
-        }),
-      })
+      .post(url, { body: data })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     console.log(data);
@@ -108,7 +97,7 @@ export function Contact() {
         </div>
         <div className="border-solid border-4 border-zinc-900 flex-1 rounded-lg lg:inline hidden p-2 items-center">
           <div className="w-full h-full flex items-center">
-            <img src={ContactMeDiagram} alt="" className="inline" />
+            <img src={ContactMeDiagram} alt="" className="" />
           </div>
         </div>
       </div>
