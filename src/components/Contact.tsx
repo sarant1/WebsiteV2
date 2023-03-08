@@ -3,7 +3,6 @@ import { useState } from "react";
 import ContactMeDiagram from "../workflows/ContactMeDiagram.png";
 
 export function Contact() {
-  var payload = new FormData();
   const url =
     "https://97lbi46pbh.execute-api.us-east-1.amazonaws.com/dev/contact";
   const [data, setData] = useState({
