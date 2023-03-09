@@ -10,7 +10,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                className="hover:bg-gray-200 p-1 rounded-3xl duration-500 m-4"
+                className="hover:bg-gray-600 p-1 rounded-3xl duration-500 m-4"
                 src={require("../icons/linkedin30.png")}
                 alt=""
               />
@@ -23,7 +23,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                className="hover:bg-gray-200 p-1 rounded-3xl duration-500 m-4"
+                className="hover:bg-gray-600 p-1 rounded-3xl duration-500 m-4"
                 src={require("../icons/github30.png")}
                 alt=""
               />

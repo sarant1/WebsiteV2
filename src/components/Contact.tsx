@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ContactMeDiagram from "../workflows/ContactMeDiagram.png";
 
 export function Contact() {
@@ -10,13 +10,48 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [successful, setSuccessful] = useState<Boolean>(false);
+  const [failed, setFailed] = useState<Boolean>(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    console.log(data.name.length);
+    if (data.name.length <= 2 || data.email.length <= 5) {
+      setFailed(true);
+      setTimeout(() => {
+        setFailed(false);
+      }, 5000);
+      return;
+    }
+
     axios
       .post(url, { body: data })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then((res: any) => {
+        if (res.status >= 200 && res.status <= 299) {
+          console.log("successful");
+          setSuccessful(true);
+          setTimeout(() => {
+            setSuccessful(false);
+          }, 5000);
+        } else {
+          console.log("Error");
+          setFailed(true);
+          setTimeout(() => {
+            setFailed(false);
+          }, 5000);
+        }
+      })
+      .then(() => {
+        formRef.current?.reset();
+        data.name = "";
+        data.email = "";
+        data.message = "";
+      })
+      .catch((err) => {
+        console.log(err);
+        setFailed(true);
+      });
     console.log(data);
   }
 
@@ -44,7 +79,7 @@ export function Contact() {
             <h2 className="text-2xl font-bold mb-2 text-gray-100">
               Contact Me!
             </h2>
-            <form onSubmit={handleSubmit} className="mb-4">
+            <form ref={formRef} onSubmit={handleSubmit} className="mb-4">
               <div className="mb-4">
                 <label className="block text-gray-100 font-bold mb-2">
                   Name
@@ -80,13 +115,24 @@ export function Contact() {
                   placeholder="Your Message"
                 ></textarea>
               </div>
-              <div className="flex ">
+              <div className="flex flex-row items-center">
                 <button
                   className="bn632-hover bn24 m-0 text-center flex justify-center items-center"
                   type="submit"
                 >
                   Send Message
                 </button>
+                <div className={successful ? "" : "hidden"}>
+                  <div className="text-green-300 text-xl ml-5">
+                    Thank You!
+                    <span className="ml-1">&#10003;</span>
+                  </div>
+                </div>
+                <div className={failed ? "" : "hidden"}>
+                  <div className="text-red-800 text-xl ml-5">
+                    something went wrong...
+                  </div>
+                </div>
               </div>
             </form>
             <p className="text-gray-600 text-xs">

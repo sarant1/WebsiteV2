@@ -1,10 +1,10 @@
 export const Hero = () => {
   return (
     <div className="bg-slate-400 rounded-lg m-2">
-      <div className="flex flex-row flex-wrap justify-center m-2">
+      <div className="flex flex-row flex-wrap justify-center m-2 min-h-[532px]">
         <div className="self-center">
           <img
-            className="rounded-xl shadow-xl w-[380px] border-black border-solid border-2"
+            className="mt-2 md:mt-0 rounded-xl shadow-xl w-[380px] border-black border-solid border-2"
             src={require("../images/grandteton.JPEG")}
             alt=""
           />

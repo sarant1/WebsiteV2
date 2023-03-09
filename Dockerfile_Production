@@ -19,7 +19,7 @@ RUN npm ci
 # COPY current directory to /app directory
 COPY . /app
 
-# not sure yet
+# Environment variables for CI and PORT
 ENV CI=true
 ENV PORT=3000
 

@@ -1,6 +1,6 @@
 export const Resume = () => {
   return (
-    <div className="bg-slate-600 m-2 rounded-lg">
+    <div className="bg-slate-600 mx-2 rounded-lg mb-5">
       <div className="xl:ml-52 xl:mr-52">
         <div className="flex flex-wrap justify-center items-center pt-20 pb-20">
           <img className="w-[320px]" src={require("../icons/cv.png")} alt="" />
