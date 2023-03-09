@@ -16,7 +16,7 @@ export function Contact() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(data.name.length);
+    // this will cause error if name or email length is lower than the following, displays error for 5 seconds
     if (data.name.length <= 2 || data.email.length <= 5) {
       setFailed(true);
       setTimeout(() => {
@@ -28,6 +28,7 @@ export function Contact() {
     axios
       .post(url, { body: data })
       .then((res: any) => {
+        // if status is between 200 and 299 then it will say thank you, otherwise it will say error
         if (res.status >= 200 && res.status <= 299) {
           console.log("successful");
           setSuccessful(true);
@@ -42,6 +43,7 @@ export function Contact() {
           }, 5000);
         }
       })
+      // this will resset the form and reset all the variables of data
       .then(() => {
         formRef.current?.reset();
         data.name = "";

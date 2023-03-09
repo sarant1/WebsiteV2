@@ -2,17 +2,17 @@ export const Hero = () => {
   return (
     <div className="bg-slate-400 rounded-lg m-2">
       <div className="flex flex-row flex-wrap justify-center m-2 min-h-[532px]">
-        <div className="self-center">
+        <div className="self-start m-2">
           <img
-            className="mt-2 md:mt-0 rounded-xl shadow-xl w-[380px] border-black border-solid border-2"
+            className="mt-2 md:mt-0 rounded-lg shadow-xl h-[400px] border-black border-solid border-2"
             src={require("../images/grandteton.JPEG")}
             alt=""
           />
         </div>
 
-        <div className="flex-1 md:ml-2 lg:ml-4 flex flex-col flex-wrap justify-between rounded-lg min-w-[333px]">
+        <div className="flex-1 md:ml-2 lg:ml-4 flex flex-col flex-wrap justify-between rounded-lg max-w-[1/3] min-w-[333px] bg-white m-2">
           <div className="lg:px-8 py-4 text flex-1">
-            <h1 className="text-3xl mb-2 mt-2">Hello I'm Sam,</h1>
+            <h1 className="text-2xl mb-2 mt-2 font-bold">Hello I'm Sam,</h1>
             <p className="text-base indent-8 mb-2">
               After previously persuing a career in the medical field, I am
               switching to tech, specifically the fast growing field of cloud
