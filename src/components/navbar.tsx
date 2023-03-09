@@ -6,9 +6,12 @@ export const Navbar = () => {
       <div className="border-b-2 border-black">
         <nav className="">
           <nav className="h-20 flex flex-row justify-between items-center md:p-6 ml-4 mr-4">
-            <Link to="">
-              <h3 className="text-2xl lg:text-3xl font-bold">Samuel Arant</h3>
-            </Link>
+            <div className="flex flex-row items-center">
+                <img className="max-w-[35px] max-h-[35px] mr-3" src={require("../icons/cloudsharkicon.png")} alt=""/>
+              <Link to="">
+                <h3 className="inline-block text-2xl lg:text-3xl font-bold">Samuel Arant</h3>
+              </Link>
+            </div>
             <div>
               <button>
                 <img
