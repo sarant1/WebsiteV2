@@ -16,11 +16,11 @@ export const Hero = () => {
             <p className="text-lg font-medium indent-8 mb-2">
               After previously persuing a career in the medical field, I am
               switching to tech, specifically the fast growing field of cloud
-              computing. My dream job would be working with in cloud, linux,
-              and/or full-stack development. I have a strong understanding of
-              computer science despite having a biomedical degree. I focus
-              mainly on the AWS platform, but am interested in working with
-              Azure and GCP as well.
+              computing. My dream job would be working with cloud, linux, and/or
+              full-stack development. I have a strong understanding of computer
+              science despite having a biomedical degree. I focus mainly on the
+              AWS platform, but am interested in working with Azure and GCP as
+              well.
             </p>
             <p className="text-lg font-medium indent-8">
               I enjoy learning about serverless services like Lambda, API
